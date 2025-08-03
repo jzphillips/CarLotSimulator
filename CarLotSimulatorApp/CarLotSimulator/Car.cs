@@ -14,18 +14,16 @@ public class Car
     public void MakeEngineNoise(string engineNoise)
     {
         EngineNoise = engineNoise;
-        Console.WriteLine($"The {Year} {Model} sounds like {EngineNoise}.");
     }
 
     public void MakeHonkNoise(string honkNoise)
     {
         HonkNoise =  honkNoise;
-        Console.WriteLine($"When you press on the horn of a {Year} {Model} it sounds like {HonkNoise}.");
     }
 
     public Car()
     {
-        
+        CarLot._numberOfCars++;
     }
 
     public Car(int year, string make, string model, bool isDriveable)
@@ -34,5 +32,7 @@ public class Car
         Make = make;
         Model = model;
         IsDriveable = isDriveable;
+        
+        CarLot._numberOfCars++;
     }
 }
